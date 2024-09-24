@@ -13,15 +13,55 @@
     --foreground: #ededed;
   }
 }
-
+/* #F3F3F3; */
 body {
+  
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* Or 'Poppins' */
+    color: #4E6D7D; /* Dark color for strong contrast */
+    letter-spacing: 0.5px; /* Adds a slight spacing for elegance */
+  }
+  
+  /* Paragraph Text */
+  p {
+    font-family: 'Roboto', sans-serif; /* Or 'Open Sans', 'Lato' */
+ /* Regular for readability */
+    font-size: 16px; /* Comfortable reading size */
+    line-height: 1.6; /* Adds spacing between lines for readability */
+ /* Softer gray for body text */
+  }
+  
+  /* Button Text */
+  button, .btn {
+    font-family: 'Poppins', sans-serif; /* Or 'Montserrat' */
+    font-weight: 600; /* Medium or semi-bold for emphasis */
+    font-size: 14px; /* Small but readable */
+/* Makes the button stand out */
+    letter-spacing: 1px; /* Adds spacing for a strong look */
+
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
+.bg-white{
+  @apply bg-[#FFFFFF]
+}
+
+.bg-secondary{
+  @apply bg-[#4E6D7D]
+}
+.primary-color{
+  @apply text-[#4E6D7D]
 }
